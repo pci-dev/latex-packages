@@ -129,12 +129,12 @@ url=false
 \includegraphics[align=c,width=0.5cm]{OAlogoblue.png} \space \large\textbf{\color{pciblue}Open Access}\\
 \\
 \includegraphics[align=c,width=0.5cm]{o_peerreview.png} \space \large\textbf{\color{pciblue}Open Peer-Review}\\
+%\\
+
+\ifthenelse{\equal{\opendata}{yes}}{\includegraphics[align=c,width=0.5cm]{o_data3.png} \space \large\textbf{\color{pciblue}Open Data}\\}{}
 \\
-%Put a condition on variable hasdata
-\includegraphics[align=c,width=0.5cm]{o_data3.png} \space \large\textbf{\color{pciblue}Open Data}\\
 \\
-%Put a condition on variable hascode
-\includegraphics[align=c,width=0.5cm]{o_script3.png} \space \large\textbf{\color{pciblue}Open Code}\\
+\ifthenelse{\equal{\opencode}{yes}}{\includegraphics[align=c,width=0.5cm]{o_script3.png} \space \large\textbf{\color{pciblue}Open Code\\}}{}
 \\
 \\
 \\
