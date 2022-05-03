@@ -1,10 +1,53 @@
-%%%%%%%%%%TO FORMAT A PREPRINT To submit to a PCI.  If accepted then use this main.tex with the package of accepted article and search for [IF ACCEPTED] comments%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  TO FORMAT A PREPRINT To submit to a PCI.  If accepted then use this main.tex with the package of accepted article and search for [IF ACCEPTED] comments  %%%
 
 \documentclass[a4paper]{article}
-\input{preambule.tex}
 
-%%% [IF ACCEPTED] CHOOSE A PCI  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%   SET THE TITLE   %%%
+\newcommand{\preprinttitle}{This is the title of the preprint}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%  SET THE LIST OF AUTHORS WITH CORRESPONDING AFFILIATIONS  use \& before last author %%%
+\newcommand{\listauthors}{\raggedright 
+FirstnameOne FamilynameOne\textsuperscript{1}, \space
+FirstnameTwo FamilynameTwo\textsuperscript{1}, \&
+FirstnameThree FamilynameThree\textsuperscript{2}
+%\fourthauthor \textsuperscript{i}
+%etc...
+}
+%%%%%%%%%%%%%%%%%%%%
+
+
+%%%  SET THE LIST OF AFFILIATIONS  %%%
+\newcommand{\listinstitutions}{
+\textsuperscript{1} DeptOne, InstitutionOne -- TownOne, CountryOne 
+\\
+\textsuperscript{2} DeptTwo, InstitutionTwo -- TownTwo, CoutryTwo
+%\\
+%\textsuperscript{3} \thirdinstitution
+%etc
+}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%  SET THE 'CORRESPONDENCE TO'  %%%
+\newcommand{\email}{mail.mail@mail.xx}
+%%%%%%%%%%%%%%%%%%%%%%
+
+%%%  SET THE ABSTRACT %%%
+\newcommand{\preprintabstract}{This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract.This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract.}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%  SET THE KEYWORDS  %%%
+\newcommand{\preprintkeywords}{KeywordOne; KeywordTwo; KeywordThree; KeywordFour; KeywordFive}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%% [IF ACCEPTED] UNCOMMENT TO CHOOSE A PCI %%%
 %\newcommand{\PCI}{Peer Community In Zoology}
 %\newcommand{\PCI}{Peer Community In Ecology}
 %\newcommand{\PCI}{Peer Community In Evolutionary Biology}
@@ -20,93 +63,53 @@
 %\newcommand{\PCI}{Peer Community In Registered Reports}
 %\newcommand{\PCI}{Peer Community In Network Science}
 %\newcommand{\PCI}{Peer Community In Microbiology}
+%%%%%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%  [IF ACCEPTED] your article contains data for which you provided the link to raw data, and {statistical script or computer code}. Chose "yes" or "no" %%%%
+%%%  [IF ACCEPTED] UNCOMMENT AND CHOOSE "yes" or "no" if your article contains data for which you provided the link to raw data, and {statistical script or computer code} %%%
 %\newcommand{\opendata}{yes}
 %\newcommand{\opencode}{yes}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%   SET THE TITLE   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\preprinttitle}{This is the title of the preprint}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%% [IF ACCEPTED] SET THE version of the preprint. Replace X by a number  [IF ACCEPTED] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  [IF ACCEPTED] UNCOMMENT AND SET THE version of the preprint. Replace X by a number   %%%
 %\newcommand{\version}{X}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%  SET THE LIST OF AUTHORS WITH CORRESPONDING AFFILIATIONS  use \& before last author %%%%%%%%%%%%%%%%%%%%
-\newcommand{\listauthors}{\raggedright 
-FirstnameOne FamilynameOne\textsuperscript{1}, \space
-FirstnameTwo FamilynameTwo\textsuperscript{1}, \&
-FirstnameThree FamilynameThree\textsuperscript{2}
-%\fourthauthor \textsuperscript{i}
-%etc...
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SET THE LIST OF AFFILIATIONS  %%%%%%%%%%%%%%%%%%%%
-\newcommand{\listinstitutions}{
-\textsuperscript{1} DeptOne, InstitutionOne -- TownOne, CountryOne 
-\\
-\textsuperscript{2} DeptTwo, InstitutionTwo -- TownTwo, CoutryTwo
-%\\
-%\textsuperscript{3} \thirdinstitution
-%etc
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%% [IF ACCEPTED] SET THE DATE OF UPLOAD on the preprint server  [IF ACCEPTED] %%%%%%%%%%%%%%
+%%%  [IF ACCEPTED] UNCOMMENT AND SET THE DATE OF LATEST UPLOAD on the preprint server    %%%
 %\newcommand{\datepub}{ddth Month yyyy}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%% [IF ACCEPTED] SET THE RECOMMENDER(s) NAME(s) [IF ACCEPTED] %%%%%%%%%%%%%%
+%%%  [IF ACCEPTED] UNCOMMENT AND SET THE RECOMMENDER(s) NAME(s)  %%%
 %\newcommand{\recommender}{FirstName FamilyName}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%% [IF ACCEPTED] SET THE DOI of the RECOMMENDATION  [IF ACCEPTED] %%%%%%%%%%%%%%
+%%%  [IF ACCEPTED] UNCOMMENT AND SET THE DOI of the RECOMMENDATION  %%%
 %\newcommand{\DOIrecommendation}{xxx/xxx}
-%%%%%%%%%%%%% for example 10.24072/pci.mcb.100003 %%%%%%%%%%%%%%%%%%%%%%%%
+%%% for example 10.24072/pci.mcb.100003 %%%
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%% [IF ACCEPTED] SET THE REVIEWERS' NAMES IF KNOWN and/or X anonymous reviewers  [IF ACCEPTED] %%%%%%%%%%%%%%
+%%%  [IF ACCEPTED] UNCOMMENT AND SET THE REVIEWERS' NAMES IF KNOWN and/or X anonymous reviewers  %%%
 %\newcommand{\reviewers}{FirstName FamilyName and two anonymous reviewer}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
 
 
-
-%%%%%%%%%%%%%%%%%%%%%   [IF ACCEPTED] SET THE 'CITE AS' OF YOUR PREPRINT. paste the line we sent you by Email (XXX the "cite as") in place of the xxx  [IF ACCEPTED] %%%%%%%%%%%%
+%%%   [IF ACCEPTED] UNCOMMENT AND SET THE 'CITE AS' OF YOUR PREPRINT. paste the line we sent you by Email (XXX the "cite as") in place of the xxx  %%%
 %\newcommand{\citeas}{xxx}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SET THE 'CORRESPONDENCE TO' %%%%%%%%%%%%%%%%%
-\newcommand{\email}{mail.mail@mail.xx}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SET THE ABSTRACT %%%%%%%%%%%%%%%%%
-\newcommand{\preprintabstract}{This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract.This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract. This is the abstract.}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SET THE KEYWORDS %%%%%%%%%%%%%%%%%
-\newcommand{\preprintkeywords}{KeywordOne; KeywordTwo; KeywordThree; KeywordFour; KeywordFive}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\input{preambule.tex}
 
 \begin{document}
 \beginingpreprint
-\linenumbers
 
-%%%%% Text of the preprint %%%%%%
+%%%  [IF ACCEPTED] COMMENT linenumbers  %%%
+\linenumbers
+%%%%%%%%%%%%%%%%%%
+
+
+%%%  TEXT OF THE PREPRINT  %%%
 % use \emph{} for italics and \parencite{} to cite a reference and \ref{XX} to cite the \label{XX}
 % use \\ and a blank line to mark the end of paragraph and starting of a new one
 
