@@ -47,10 +47,10 @@ url=false
 \addtocategory{ignore}{recommendation} % adding recommendation to 'ignore' category so that it does not appear in the References
 % Clickable references. Use \url{www.example.com} or \href{www.example.com}{description} to add a clicky url
 \usepackage{nameref}
-\usepackage[pdfborder={0 0 0}]{hyperref}  % sets link border to white
 \urlstyle{same}
 
 
+\DeclareFieldFormat{doi}{\url{https://doi.org/#1}}
 
 % Include figures
 \usepackage{graphbox}  % loads graphicx ppackage with extended options for vertical alignment of figures
@@ -74,6 +74,12 @@ url=false
 \usepackage{changepage}
 % Adjust caption style
 \usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,singlelinecheck=off]{caption}
+\usepackage[pdfborder={0 0 0},   
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue]{hyperref}  % sets link border to white
+
 
 % Headers and footers
 
@@ -94,6 +100,8 @@ url=false
 % DOI's
 \newcommand{\DOIlink}{\href{https://doi.org/\DOI}{https://doi.org/\DOI}}
 \newcommand{\DOIrecommendationlink}{\href{https://doi.org/\DOIrecommendation}{https://doi.org/\DOIrecommendation}}
+
+
 
 %which logo to display
 \ifthenelse{\equal{\PCI}{Peer Community In Zoology}}{\newcommand{\logoname}{logo_PDF_zool.jpg}}{}
@@ -141,7 +149,7 @@ url=false
 \vspace*{0.5cm}
 
 \textbf{Correspondence:}\\
-{\color{pciblue}\href{mailto:\email}{\email}}\\
+{\href{mailto:\email}{\color{pciblue}\email}}\\
 \vspace*{0.5cm}
 
 \textbf{Recommender:}\\
@@ -174,9 +182,7 @@ url=false
 \fcolorbox{lightgray}{lightgray}{
 \parbox{\textwidth - 2\fboxsep}{
 \centering\large{\selectfont{This article has been peer-reviewed and recommended by\\
-\emph{\PCI} (\DOIrecommendationlink)}}\\
-%\raggedright\large{\fontseries{sb}\selectfont{An article peer-reviewed and recommended by \emph{\PCI}, edited by \recommender \space on the basis of the reviews by \reviewers \space (DOI: \DOIrecommendationlink)}}\\
-%\small \fullcite{preprint}
+\emph{\PCI} (\color{black}\DOIrecommendationlink)}}\\
 }}
 \end{flushleft}
 \vspace*{0.5cm}
