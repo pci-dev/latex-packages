@@ -81,15 +81,12 @@ url=false
 \usepackage{fancyhdr}  % custom headers/footers
 \pagestyle{fancy}  % enables customization of headers/footers
 \fancyhfoffset[L]{4.5cm}  % offsets header and footer to the left to include margin
-\renewcommand{\headrulewidth}{\ifnum\thepage=1 0.5pt \else 0pt \fi} % header ruler only on first page
-%\renewcommand{\footrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{\ifnum\thepage=1 0.5pt \else 0pt \fi}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 % full logo on first page, then no logo on subsequent pages 
 \lhead{\ifnum\thepage=1 \includegraphics[width=13.5cm]{\logoname}\else \fi}  
 \chead{}
 \rhead{}
-
-\lfoot{\ifnum\thepage=1 \scriptsize \textsc{\color{mediumgray}\PCI} \else  \fi}
 \cfoot{}
 \rfoot{}
 % End Headers and footers
@@ -123,38 +120,36 @@ url=false
 \baselineskip=30pt
 % Margin information
 \marginpar{
-\large\textnormal{\color{pciblue}\\RESEARCH ARTICLE}\\
-\vspace*{0.5pt}
-\\
-\includegraphics[align=c,width=0.5cm]{OAlogoblue.png} \space \large\textbf{\color{pciblue}Open Access}\\
-\\
-\includegraphics[align=c,width=0.5cm]{o_peerreview.png} \space \large\textbf{\color{pciblue}Open Peer-Review}\\
-%\\
-
-\ifthenelse{\equal{\opendata}{yes}}{\includegraphics[align=c,width=0.5cm]{o_data3.png} \space \large\textbf{\color{pciblue}Open Data}\\}{}
-\\
-\\
-\ifthenelse{\equal{\opencode}{yes}}{\includegraphics[align=c,width=0.5cm]{o_script3.png} \space \large\textbf{\color{pciblue}Open Code\\}}{}
-\\
-\\
-\\
-\\
 \raggedright
-%\vspace*{3.25cm}
-\scriptsize\textbf{Cite as:}\space
-\citeas\\
+\large\textnormal{\color{pciblue}RESEARCH ARTICLE}\\
+\vspace*{15pt}
+\includegraphics[align=c,width=0.5cm]{OAlogoblue.png} \space \large{\color{pciblue}Open Access}\\
+\includegraphics[align=c,width=0.5cm]{o_peerreview.png} \space \large{\color{pciblue}Open Peer-Review}\\
+\ifthenelse{\equal{\opendata}{yes}}{\includegraphics[align=c,width=0.5cm]{o_data3.png} \space \large{\color{pciblue}Open Data}}{}
+\\
+\ifthenelse{\equal{\opencode}{yes}}{\includegraphics[align=c,width=0.5cm]{o_script3.png} \space \large{\color{pciblue}Open Code}}{}
+\\
+\raggedleft
+\vspace*{2cm}
+
+\normalsize\textbf{Posted:}\\
+\datepub\\
 \vspace*{0.5cm}
-\textbf{Posted:} \datepub\\
+
+\textbf{Cite as:}\\
+{\color{pciblue}\citeas}\\
 \vspace*{0.5cm}
+
+\textbf{Correspondence:}\\
+{\color{pciblue}\href{mailto:\email}{\email}}\\
+\vspace*{0.5cm}
+
 \textbf{Recommender:}\\
 \recommender\\
 \vspace*{0.5cm}
+
 \textbf{Reviewers:}\\
 \reviewers\\
-\vspace*{0.5cm}
-\textbf{Correspondence:}\\
-\href{mailto:\email}{\email}\\
-
 
 }
 {\Huge
@@ -165,26 +160,6 @@ url=false
 %\marginpar{
 
 
-%\marginnote{
-%\raggedright
-%\vspace*{3.25cm}
-%\scriptsize\textbf{Cite as:}\space
-%\fullcite{preprint}\\
-%\vspace*{0.5cm}
-%\textbf{Published:} \datepub\\
-%\vspace*{0.5cm}
-%\textbf{Recommender:}\\
-%\recommender\\
-%\vspace*{0.5cm}
-%\textbf{Reviewers:}\\
-%\reviewers\\
-%\vspace*{0.5cm}
-%\textbf{Correspondence:}\\
-%\href{mailto:\email}{\email}\\
-%\vspace*{0.5cm} 
-%\vspace*{3cm}
-%\vspace*{0.2cm}
-%}[0.8cm]
 
 
 \Large
@@ -198,7 +173,7 @@ url=false
 %\noindent
 \fcolorbox{lightgray}{lightgray}{
 \parbox{\textwidth - 2\fboxsep}{
-\centering\large{\fontseries{sb}\selectfont{This article has been peer-reviewed and recommended by\\
+\centering\large{\selectfont{This article has been peer-reviewed and recommended by\\
 \emph{\PCI} (\DOIrecommendationlink)}}\\
 %\raggedright\large{\fontseries{sb}\selectfont{An article peer-reviewed and recommended by \emph{\PCI}, edited by \recommender \space on the basis of the reviews by \reviewers \space (DOI: \DOIrecommendationlink)}}\\
 %\small \fullcite{preprint}
