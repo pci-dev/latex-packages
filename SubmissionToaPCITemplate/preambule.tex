@@ -47,10 +47,9 @@ url=false
 \addtocategory{ignore}{recommendation} % adding recommendation to 'ignore' category so that it does not appear in the References
 % Clickable references. Use \url{www.example.com} or \href{www.example.com}{description} to add a clicky url
 \usepackage{nameref}
-\usepackage[pdfborder={0 0 0}]{hyperref}  % sets link border to white
 \urlstyle{same}
 
-
+\DeclareFieldFormat{doi}{\url{https://doi.org/#1}}
 
 % Include figures
 \usepackage{graphbox}  % loads graphicx ppackage with extended options for vertical alignment of figures
@@ -73,7 +72,14 @@ url=false
 % Adjust caption style
 \usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,singlelinecheck=off]{caption}
 
-% Headers and footers
+
+\usepackage[pdfborder={0 0 0},   
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue]{hyperref}  % sets link border to white
+
+
 
 
 % DOI's
