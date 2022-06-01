@@ -5,6 +5,7 @@
 \usepackage[top=7cm,bottom=2.5cm,headheight=120pt,headsep=15pt,left=6cm,right=1.5cm,marginparwidth=4.2cm,marginparsep=0.5cm]{geometry}
 
 \usepackage{marginnote}
+\usepackage{setspace}
 \usepackage{ifthen}
 \usepackage{pdflscape}
 \reversemarginpar  % sets margin notes to the left
@@ -138,22 +139,24 @@ url=false
 \ifthenelse{\equal{\opencode}{yes}}{\includegraphics[align=c,width=0.5cm]{o_script3.png} \space \large{\color{pciblue}Open Code}}{}
 \\
 \raggedleft
-\vspace*{2cm}
+\vspace*{1cm}
 
-\textbf{Cite as:}\\
-{\color{pciblue}\citeas}\\
+\small{\textbf{Cite as:}}\\
+\begin{singlespace}
+\small{\color{pciblue}\citeas}\\
+\end{singlespace}
 \vspace*{0.5cm}
 
-\textbf{Correspondence:}\\
-{\href{mailto:\email}{\color{pciblue}\email}}\\
+\small{\textbf{Correspondence:}}\\
+\href{mailto:\email}{\small{\color{pciblue}\email}}\\
 \vspace*{0.5cm}
 
-\textbf{Recommender:}\\
-\recommender\\
+\small{\textbf{Recommender:}}\\
+\small{\recommender}\\
 \vspace*{0.5cm}
 
-\textbf{Reviewers:}\\
-\reviewers\\
+\small{\textbf{Reviewers:}}\\
+\small{\reviewers}\\
 
 }
 {\Huge
